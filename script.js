@@ -87,30 +87,30 @@ function closeLetter() {
 }
 
 function giveFlowers() {
-    for (let i = 0; i < 15; i++) {
-        const flower = document.createElement("div");
-        flower.classList.add("flower-animation");
-        flower.innerText = "🌹"; // Rose emoji
-
-        // Random positioning for a natural effect
-        flower.style.left = Math.random() * 90 + "vw";
-        flower.style.top = "100vh"; // Starts at the bottom
-        flower.style.fontSize = Math.random() * 40 + 40 + "px"; // Bigger flowers (40px to 80px)
-
-        document.body.appendChild(flower);
-
-        // Make the flower move IMMEDIATELY (no delay)
+    for (let i = 0; i < 15; i++) { // 15 flowers appear instantly
         setTimeout(() => {
-            flower.style.top = Math.random() * 50 + "vh"; // Move up quickly
-            flower.style.opacity = "0.9"; // Keep them visible
-        }, 50); // Almost no delay before they move
+            const flower = document.createElement("div");
+            flower.classList.add("flower-animation");
+            flower.innerText = "🌹"; // Rose emoji
 
-        // Remove flowers after 2 seconds to avoid screen clutter
-        setTimeout(() => {
-            flower.remove();
-        }, 2500);
+            // Random positioning
+            flower.style.left = Math.random() * 90 + "vw";
+            flower.style.top = "100vh"; // Start from the bottom
+            flower.style.fontSize = Math.random() * 40 + 40 + "px"; // Bigger flowers (40px-80px)
+
+            document.body.appendChild(flower);
+
+            // Move each flower upwards immediately after being created
+            setTimeout(() => {
+                flower.style.top = Math.random() * 50 + "vh"; // Move up to mid-screen
+                flower.style.opacity = "1";
+            }, 100); // Short delay to avoid overlapping
+
+            // Remove flowers after 3 seconds
+            setTimeout(() => {
+                flower.remove();
+            }, 3000);
+        }, i * 100); // Staggers the appearance slightly for a natural effect
     }
 }
-
-    }
 }

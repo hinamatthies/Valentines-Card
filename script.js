@@ -80,6 +80,7 @@ document.addEventListener("mousemove", (e) => {
         heart.remove();
     }, 1000);
 });
+}
 
 function closeLetter() {
     document.getElementById('letter').style.display = 'none'; // Hide the letter

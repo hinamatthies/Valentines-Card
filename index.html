@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Eternal Valentine ❤️</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="card">
+        <h1><span class="heart">❤️</span> Happy Valentine's! <span class="heart">❤️</span></h1>
+        <div id="main-message">
+            <p>To My Dearest Jack,</p>
+            <p>Click the envelope to open my letter to you 💌</p>
+            <img src="LETTER.jpg" class="envelope" onclick="openLetter()" alt="Envelope">
+        </div>
+
+         <div class="letter-content" id="letter" style="display: none;">
+        <p id="letter-text"></p>
+        <button onclick="closeLetter()">❌ Close Letter</button>
+    </div>
+    </div>
+    
+   
+    <div class="button-container">
+    <img src="flower.png" class="icon-button" onclick="giveFlowers()" alt="Give Flowers">
+    <img src="vinyl.png" class="icon-button spinning-icon" onclick="window.open('https://open.spotify.com/playlist/2E74cbsVfc1ZRLQiY6mHUs?si=8513868d564a42ac', '_blank')" alt="Music">
+    <img src="hug.png" class="icon-button" onclick="sendVirtualHug()" alt="Virtual Hug">
+</div>
+    
+    </div>
+  
+    </div>
+    
+    <script src="script.js"></script>
+  
+</body>
+</html>

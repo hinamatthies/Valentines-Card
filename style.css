@@ -137,24 +137,28 @@ button {
 
 .icon-button:hover {
     transform: scale(1.3); /* Enlarges icon when hovered */
+}
 .spinning-icon {
-    width: 75px; /* Ensure size is correct */
+    width: 75px;
     height: 75px;
     cursor: pointer;
-    transition: transform 0.3s ease-in-out; /* Keeps a smooth transition */
+    transition: transform 0.3s ease-in-out; /* Smooth effect */
 }
+
 .spinning-icon:hover {
-    animation: spin 2s linear infinite; /* Keeps spinning while hovered */
+    animation: spin 1s linear infinite; /* Continuous spinning effect */
+    transform-origin: center; /* Ensures smooth rotation */
 }
-    
+
 @keyframes spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
 
 .flower-animation {
     position: fixed;
-    transition: top 1s ease-in-out, opacity 1.2s ease-in-out; /* Faster transition */
+    transition: top 1s ease-out, opacity 1s ease-in-out; /* Smooth floating */
     opacity: 1;
+}
     

@@ -4,7 +4,7 @@ function openLetter() {
 
     // Apply typewriter effect
     const letterText = `My Love,
-    
+
 Words cannot fully convey the ardent love that I have for you. 
 You inspire me to be my best, and I want to have you by my side forever. 
 
@@ -58,6 +58,7 @@ function typeWriterEffect(text, element, speed = 50) {
     type();
 }
 
+// Floating heart animation when moving mouse
 document.addEventListener("mousemove", (e) => {
     const heart = document.createElement("div");
     heart.classList.add("floating-heart");
@@ -80,7 +81,6 @@ document.addEventListener("mousemove", (e) => {
         heart.remove();
     }, 1000);
 });
-}
 
 function closeLetter() {
     document.getElementById('letter').style.display = 'none'; // Hide the letter
@@ -114,4 +114,3 @@ function giveFlowers() {
         }, i * 100); // Staggers the appearance slightly for a natural effect
     }
 }
-

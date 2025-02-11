@@ -137,15 +137,16 @@ button {
 
 .icon-button:hover {
     transform: scale(1.3); /* Enlarges icon when hovered */
-}
 .spinning-icon {
-    transition: transform 0.3s ease-in-out;
+    width: 75px; /* Ensure size is correct */
+    height: 75px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out; /* Keeps a smooth transition */
 }
-
 .spinning-icon:hover {
-    animation: spin 1s linear infinite; /* Makes the vinyl spin when hovered */
+    animation: spin 2s linear infinite; /* Keeps spinning while hovered */
 }
-
+    
 @keyframes spin {
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
@@ -154,5 +155,6 @@ button {
 
 .flower-animation {
     position: fixed;
-    transition: top 1.5s ease-in-out, opacity 1.5s ease-in-out;
-}
+    transition: top 1s ease-in-out, opacity 1.2s ease-in-out; /* Faster transition */
+    opacity: 1;
+    

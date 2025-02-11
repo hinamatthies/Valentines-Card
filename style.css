@@ -20,6 +20,14 @@ body {
     position: relative;
 }
 
+.envelope {
+    transition: transform 0.3s ease-in-out;
+}
+
+.envelope:hover {
+    transform: scale(1.05); /* Slightly enlarges on hover */
+}
+
 .heart {
     color: #ff3366;
     font-size: 50px;
@@ -116,20 +124,19 @@ button {
 .button-container {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 50px; /* Increased space between icons */
     margin-top: 20px;
 }
 
 .icon-button {
-    width: 50px; /* Adjust size as needed */
-    height: 50px;
+    width: 70px; /* Adjust size as needed */
+    height: 70px;
     cursor: pointer;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, scale 0.3s ease-in-out;
 }
 
-.spinning-icon:hover {
-    animation: spin 1s linear infinite;
-  transform: scale(1.5); 
+.icon-button:hover {
+    transform: scale(1.3); /* Enlarges icon when hovered */
 }
 
 @keyframes spin {

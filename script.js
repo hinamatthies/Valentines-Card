@@ -114,4 +114,4 @@ function giveFlowers() {
         }, i * 100); // Staggers the appearance slightly for a natural effect
     }
 }
-}
+
